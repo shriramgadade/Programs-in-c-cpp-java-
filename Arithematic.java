@@ -1,20 +1,10 @@
-package Marvellous1;
+package Marvellous.Infosystems;
 
 public class Arithematic
 {
-    public int ivalueue1;
-    public int ivalueue2;
-
-    public Arithematic(int A,int B)
+    public int Substraction(int A,int B)
     {
-        this.ivalueue1 = A;
-        this.ivalueue2 = B;
+        return A-B;
     }
-     public int Addition()
-    {
-        int iSum = 0;
-        iSum = this.ivalueue1 + this.ivalueue2;
-        return iSum;
-    }
-
 }
+//javac -d . Arithematic.java
