@@ -1,0 +1,24 @@
+#include<stdio.h>
+int minimum(int no1,int no2)
+{
+    if(no1 < no2)
+    {
+        return no1;
+    }
+     if(no1 > no2)
+    {
+        return no2;
+    }
+}
+int main()
+{
+    int ivalue1=0;
+    int ivalue2=0;
+    printf("enter the two number is\n");
+    scanf("%d%d",&ivalue1,&ivalue2);
+
+    int iret=0;
+    iret = minimum(ivalue1,ivalue2);
+
+    printf("smallest number is :- %d\n",iret);
+}
