@@ -18,7 +18,7 @@ class Matrix
         for(i = 0; i < Arr.length; i++)
         {
             for(j = 0; j < Arr[i].length; j++)
-            { 
+            {
                 Arr[i][j] = sobj.nextInt();
             }
         }
