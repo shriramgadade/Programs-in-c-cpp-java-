@@ -1,7 +1,18 @@
 import java.util.*;
 
-class Program249
+class Program252
 {
+    public static void Display(int Brr[])
+    {
+        int iCnt = 0;
+
+        for(iCnt = 0; iCnt < Brr.length; iCnt++)
+        {
+            System.out.print(Brr[iCnt]+"\t");
+        }
+        System.out.println();
+    }
+
     public static void main(String Arg[])
     {
         Scanner sobj = new Scanner(System.in);
@@ -18,6 +29,8 @@ class Program249
         {
             Arr[iCnt] = sobj.nextInt();
         }
+
+        Display(Arr);
 
         sobj.close();
     }

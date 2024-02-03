@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Program258
+class Program256
 {
     public static void main(String Arg[])
     {
@@ -11,12 +11,11 @@ class Program258
         System.out.println("Enter your name : ");
         str = sobj.nextLine();
 
-        char Arr[] = str.toCharArray();
         int iCnt = 0;
-
-        for(iCnt = 0; iCnt < Arr.length; iCnt++)
+        
+        for(iCnt = 0; iCnt < str.length(); iCnt++)
         {
-            System.out.println(Arr[iCnt]);
+            System.out.println(str.charAt(iCnt));
         }
         
         sobj.close();

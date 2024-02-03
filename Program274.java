@@ -1,10 +1,10 @@
 import java.util.*;
 
-class Program265
+class Program274
 {
     public static boolean CheckBit(int iNo)
     {
-        int iMask = 4;
+        int iMask = 0x00000a00;
         int iResult = 0;
         iResult = iNo & iMask;
 
@@ -31,30 +31,22 @@ class Program265
     
         if(bRet == true)
         {
-            System.out.println("3rd bit is ON");
+            System.out.println("10th & 12th bits are ON");
         }
         else
         {
-            System.out.println("3rd bit is OFF");
+            System.out.println("Bits are off");
         }
     }
 }
 
 /*
 
-Input            1   1   0   1   0   0   0   1
-Mask             0   0   0   0   0   1   0   0      &
-------------------------------------------------------
-Result           0   0   0   0   0   0   0   0
+    Bit position 10 and 12
 
+    0000    0000    0000    0000    0000    1010    0000    0000
+    0       0       0       0       0       a       0       0
 
-
-
-
-Input            1   0   0   0   1   1   1   1 
-Mask             0   0   0   0   0   1   0   0      &
-------------------------------------------------------
-Result           0   0   0   0   0   1   0   0
-
-
-*/
+    0x00000a00
+    
+/

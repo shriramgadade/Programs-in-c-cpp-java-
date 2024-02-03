@@ -1,47 +1,67 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Program269
+class Program269
 {
-    public static boolean Checkbit(int iNo)
+    public static boolean CheckBit(int iNo)
     {
-        int imask = 260;
-        int iresult = 0;
+        int iMask = 260;
+        int iResult = 0;
+        iResult = iNo & iMask;
 
-        
-        
-         iresult = iNo & imask;
-        if(iresult==imask)
+        if(iResult == iMask)
         {
             return true;
         }
         else
         {
-             return false; 
-
+            return false;
         }
-
     }
-     public static void main(String Arg[])
+
+    public static void main(String arg[])
     {
         Scanner sobj = new Scanner(System.in);
         int iNo = 0;
-        boolean bret = false;
-       bret = Checkbit(iNo);
+        boolean bRet = false;
 
-        System.out.println("Enter number :");
+        System.out.println("Enter number : ");
         iNo = sobj.nextInt();
-         if(bret==true)
+
+        bRet = CheckBit(iNo);
+    
+        if(bRet == true)
         {
-            System.out.println("3rd and 9th bit is ONN");
+            System.out.println("3rd & 9th bits are ON");
         }
         else
         {
-             System.out.println("3rd and 9th bit is OFF");
-
+            System.out.println("Bits are off");
         }
-
-
-       
-    
     }
 }
+/*
+
+                        0   0   0   0
+                        8   4   2   1
+
+-----------------------------------------------------
+    Decimal         Binary          Hexadecimal
+-----------------------------------------------------
+    0               0000            0 
+    1               0001            1
+    2               0010            2
+    3               0011            3
+    4               0100            4
+    5               0101            5
+    6               0110            6
+    7               0111            7
+    8               1000            8
+    9               1001            9
+    10              1010            a
+    11              1011            b
+    12              1100            c
+    13              1101            d
+    14              1110            e
+    15              1111            f
+-----------------------------------------------------
+*/

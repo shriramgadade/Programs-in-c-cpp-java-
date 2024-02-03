@@ -1,24 +1,24 @@
-import java.util.*;
-public class Program261
-{
-    public static void main(String arg[])
-    {
-        Scanner sobj = new Scanner(System.in);
-        int iNo = 0;
-        int iDigit = 0;
 
-        System.out.println("Enter the number :  ");
-        iNo = sobj.nextInt();
+/*
+&   Bitwise AND
+|   Bitwise OR
+^   Bitwise XOR
+~   Bitwise NOT
+<<  Bitwise Left Shift
+>>  Bitwise Right Shift
+*/
 
-        while(iNo != 0)
-        {
-            iDigit = iNo %2;
-            iNo = iNo /2;
-            System.out.print(iDigit);
-           
-        }
-        sobj.close();
-    }
+/*
+Bitwise Operator Table
 
+Operand1      Operand2      &       |       ^       
+1               1           1       1       0
+1               0           0       1       1
+0               1           0       1       1
+0               0           0       0       0
 
-}
+Operand     ~
+0           1
+1           0
+*/
+

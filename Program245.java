@@ -1,15 +1,17 @@
 import java.util.*;
 
-class Program244
+class Program245
 {
     public static int Factorial(int iNo)
     {
         int iFact = 1;
         int iCnt = 0;
 
-        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        iCnt = 1;
+        while(iCnt <= iNo)
         {
             iFact = iFact * iCnt;
+            iCnt++;
         }
         return iFact;
     }

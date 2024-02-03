@@ -1,47 +1,65 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Program267
+class Program267
 {
-    public static boolean Checkbit(int iNo)
+    public static boolean CheckBit(int iNo)
     {
-        int imask = 65536;
-        int iresult = 0;
+        int iMask = 65536;
+        int iResult = 0;
+        iResult = iNo & iMask;
 
-        
-        
-         iresult = iNo & imask;
-        if(iresult==imask)
+        if(iResult == iMask)
         {
             return true;
         }
         else
         {
-             return false; 
-
+            return false;
         }
-
     }
-     public static void main(String Arg[])
+
+    public static void main(String arg[])
     {
         Scanner sobj = new Scanner(System.in);
         int iNo = 0;
-        boolean bret = false;
-       bret = Checkbit(iNo);
+        boolean bRet = false;
 
-        System.out.println("Enter number :");
+        System.out.println("Enter number : ");
         iNo = sobj.nextInt();
-         if(bret==true)
+
+        bRet = CheckBit(iNo);
+    
+        if(bRet == true)
         {
-            System.out.println("17 th bit is ONN");
+            System.out.println("17th bit is ON");
         }
         else
         {
-             System.out.println("17 th bit is OFF");
-
+            System.out.println("17th bit is OFF");
         }
-
-
-       
-    
     }
 }
+
+/*
+
+Input            1   1   0   1   0   0   0   1
+Mask             0   0   0   0   0   1   0   0      &
+------------------------------------------------------
+Result           0   0   0   0   0   0   0   0
+
+
+
+
+
+Input            1   0   0   0   1   1   1   1 
+Mask             0   0   0   0   0   1   0   0      &
+------------------------------------------------------
+Result           0   0   0   0   0   1   0   0
+
+
+*/
+
+
+//00000000    00000000    01000000    01000000
+
+// 64 + 16384

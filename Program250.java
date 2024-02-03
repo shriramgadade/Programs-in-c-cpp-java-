@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Program249
+class Program250
 {
     public static void main(String Arg[])
     {
@@ -19,6 +19,12 @@ class Program249
             Arr[iCnt] = sobj.nextInt();
         }
 
+        System.out.println("Elements of the array are : ");
+        for(iCnt = 0; iCnt < iSize; iCnt++)
+        {
+            System.out.println(Arr[iCnt]);
+        }
+        
         sobj.close();
     }
 }

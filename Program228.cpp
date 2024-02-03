@@ -1,4 +1,4 @@
-// Singly Circular
+// Doubly Circular
 #include<iostream>
 using namespace std;
 
@@ -6,9 +6,10 @@ typedef struct node
 {
     int data;
     struct node *next;
+    struct node *prev;
 }NODE, *PNODE;
 
-class SinglyCL
+class DoublyCL
 {
     private:
         PNODE first;
@@ -16,7 +17,7 @@ class SinglyCL
         int Count;
 
     public:
-        SinglyCL();
+        DoublyCL();
         void InsertFirst(int no);
         void InsertLast(int no);
         void Display();
@@ -27,24 +28,24 @@ class SinglyCL
         void DeleteAtPos(int ipos);
 };
 
-SinglyCL::SinglyCL()
+DoublyCL::DoublyCL()
 {
     first = NULL;
     last = NULL;
     Count = 0;
 }
 
-void SinglyCL::InsertFirst(int no){}
-void SinglyCL::InsertLast(int no){}
-void SinglyCL::Display(){}
-int SinglyCL::CountNode()
+void DoublyCL::InsertFirst(int no){}
+void DoublyCL::InsertLast(int no){}
+void DoublyCL::Display(){}
+int DoublyCL::CountNode()
 {
     return Count;
 }
-void SinglyCL::DeleteFirst(){}
-void SinglyCL::DeleteLast(){}
-void SinglyCL::InsertAtPos(int no,int ipos){}
-void SinglyCL::DeleteAtPos(int ipos){}
+void DoublyCL::DeleteFirst(){}
+void DoublyCL::DeleteLast(){}
+void DoublyCL::InsertAtPos(int no,int ipos){}
+void DoublyCL::DeleteAtPos(int ipos){}
 
 int main()
 {

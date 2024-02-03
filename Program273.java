@@ -1,42 +1,52 @@
 import java.util.*;
-public class Program273
+
+class Program273
 {
-    public static boolean Checkbit(int iNo)
+    public static boolean CheckBit(int iNo)
     {
-        int imask = 0x00004040;
-        int iresult = 0;
-        
-        
-        
-        iresult = iNo & imask;
-        if(iresult==imask)
+        int iMask = 0x00004040;
+        int iResult = 0;
+        iResult = iNo & iMask;
+
+        if(iResult == iMask)
         {
             return true;
         }
         else
         {
-             return false; 
-
+            return false;
         }
-
     }
-     public static void main(String Arg[])
+
+    public static void main(String arg[])
     {
         Scanner sobj = new Scanner(System.in);
         int iNo = 0;
-        boolean bret = false;
-        bret = Checkbit(iNo);
+        boolean bRet = false;
 
-        System.out.println("Enter number :");
+        System.out.println("Enter number : ");
         iNo = sobj.nextInt();
-         if(bret==true)
+
+        bRet = CheckBit(iNo);
+    
+        if(bRet == true)
         {
-            System.out.println("7th ans 15th  bit is ONN");
+            System.out.println("7th & 15th bits are ON");
         }
         else
         {
-            System.out.println("7th and 15th bit is OFF");
-
+            System.out.println("Bits are off");
         }
     }
 }
+
+/*
+
+    Bit position 7 and 15
+
+    0000    0000    0000    0000    0100    0000    0100    0000
+    0       0       0       0       4       0       4       0
+
+    0x00004040
+    
+/

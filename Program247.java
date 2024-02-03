@@ -1,49 +1,44 @@
 import java.util.*;
+
 class Program247
 {
-    public static void evenoddfactors(int iNo)
+    public static void EvenOddFactors(int iNo)
     {
-       int iSumeven=0;
-       int iSumodd =0;
-        int icnt = 0;
-        for(icnt = 1;icnt<=iNo;icnt++)
+        int iFact = 1;
+        int iCnt = 0;
+
+        int iSumEven = 0;
+        int iSumOdd = 0;
+
+        for(iCnt = 1; iCnt <= iNo; iCnt++)
         {
-            if((icnt%2)==0)
+            if((iNo % iCnt) == 0)
             {
-                iSumeven = iSumeven + icnt;
+                if((iCnt % 2) == 0)
+                {
+                    iSumEven = iSumEven + iCnt;
+                }
+                else
+                {
+                    iSumOdd = iSumOdd + iCnt;
+                }
             }
-            else
-            {
-               iSumodd = iSumodd + icnt;
-            }
-
         }
-        System.out.println("Addition of even factor is :--"+iSumEven);
-        System.out.println("Addition of odd factor is :--"+iSumodd);
+        System.out.println("Addition of even factors is : "+iSumEven);
+        System.out.println("Addition of odd factors is : "+iSumOdd);
     }
-}
-        
 
-    
-   
     public static void main(String Arg[])
     {
-       
         Scanner sobj = new Scanner(System.in);
 
-        int iValue = 0,iAns =0;
+        int iValue = 0;
 
         System.out.println("Enter number : ");
         iValue = sobj.nextInt();
-         evenoddfactors(iValue);
 
-        System.out.println("Factorial is :"+iAns);
+        EvenOddFactors(iValue);
+
         sobj.close();
-
-       
-
-
     }
-    
 }
-

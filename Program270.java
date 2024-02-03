@@ -1,41 +1,35 @@
 import java.util.*;
-public class Program270 
+
+class Program270
 {
-
-    public static boolean Checkbit(int iNo)
-    {
-        int imask = 0x00000004;
-        int iResult=0;
-        iResult = imask & iNo;
-        if(iResult==imask)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    public static void main(String Arg[])
-
+    public static void main(String arg[])
     {
         Scanner sobj = new Scanner(System.in);
         int iNo = 0;
-        boolean iRet = false;
-        
-        System.out.println("Enter The Number\n");
+        int iMask = 0X00000004;
+        int iResult = 0;
+
+        System.out.println("Enter number : ");
         iNo = sobj.nextInt();
 
-        iRet = Checkbit(iNo);
-        if(iRet==true)
+        iResult = iNo & iMask;
+    
+        if(iResult == iMask)
         {
-            System.out.println("3rd Bit is ONN\n");
+            System.out.println("3rd bit is ON");
         }
         else
         {
-            System.out.println("3rd Bit is OFF\n");
+            System.out.println("3rd bit is OFF");
         }
-
     }
-
 }
+/*
+    iMask = 4;
+
+    0000    0000    0000    0000    0000    0000    0000    0100
+    0       0       0       0       0       0       0       4
+
+    0X00000004
+
+/

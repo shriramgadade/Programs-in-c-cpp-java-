@@ -1,49 +1,45 @@
-import java.util.Scanner;
-/* 3 bit are on off */
+import java.util.*;
 
-public class Program264
+class Program264
 {
-    public static boolean Checkbit(int iNo)
-    {
-         int imask = 4;
-        int iresult = 0;
-
-        
-        
-         iresult = iNo & imask;
-        if(iresult==imask)
-        {
-            return true;
-        }
-        else
-        {
-             return false; 
-
-        }
-
-    }
-     public static void main(String Arg[])
+    public static void main(String arg[])
     {
         Scanner sobj = new Scanner(System.in);
         int iNo = 0;
-        boolean bret = false;
-      
-        System.out.println("Enter number :");
-        iNo = sobj.nextInt();
-         bret = Checkbit(iNo);
+        int iMask = 4;
+        int iResult = 0;
 
-         if(bret==true)
+        System.out.println("Enter number : ");
+        iNo = sobj.nextInt();
+
+        iResult = iNo & iMask;
+    
+        if(iResult == iMask)
         {
-            System.out.println("3 rd bit is ON");
+            System.out.println("3rd bit is ON");
         }
         else
         {
-             System.out.println("3 rd bit is OFF");
-
+            System.out.println("3rd bit is OFF");
         }
-
-
-       
-    
     }
 }
+
+/*
+
+Input            1   1   0   1   0   0   0   1
+Mask             0   0   0   0   0   1   0   0      &
+------------------------------------------------------
+Result           0   0   0   0   0   0   0   0
+
+
+
+
+
+Input            1   0   0   0   1   1   1   1 
+Mask             0   0   0   0   0   1   0   0      &
+------------------------------------------------------
+Result           0   0   0   0   0   1   0   0
+
+
+*/
